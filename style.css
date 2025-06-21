@@ -1,0 +1,1946 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Widock TRIAL'; /* Новый шрифт */
+    text-align: center;
+}
+        
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+        
+a {
+    text-decoration: none;
+    color: inherit;
+}
+        
+ul {
+    list-style: none;
+}
+        
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Анимация появления */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+        
+/* Шапка */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #e30613;
+}
+        
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+        
+.logo img {
+    height: 40px;
+}
+        
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+        
+nav a {
+    font-weight: 600;
+    color: #555;
+    transition: color 0.3s;
+}
+        
+nav a:hover {
+    color: #e30613;
+}
+        
+.auth a {
+    margin-left: 15px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+        
+.auth a:first-child {
+    color: #e30613;
+    border: 1px solid #e30613;
+}
+
+.auth a:last-child {
+    background-color: #e30613;
+    color: white;
+}
+        
+/* Герой-баннер */
+.hero {
+    background-color: #e30613;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #e30613;
+}
+        
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+        
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+        
+.cta-button {
+    display: inline-block;
+    background-color: white;
+    color: #e30613;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #e30613;
+}
+        
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+        
+/* Блок курсов */
+#courses {
+    padding: 40px 0;
+}
+        
+#courses h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #333;
+}
+        
+.course-categories {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+        
+.category {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+    border: 1px solid #e30613;
+}
+        
+.category:hover {
+    transform: translateY(-5px);
+}
+        
+.category h3 {
+    color: #e30613;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+        
+.category li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+}
+        
+.category li:before {
+    content: "•";
+    color: #e30613;
+    position: absolute;
+    left: 0;
+}
+        
+.category a:hover {
+    color: #e30613;
+    text-decoration: underline;
+}
+        
+/* Как это работает */
+.how-it-works {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+    text-align: center;
+    margin: 40px 0;
+    border-top: 2px solid #e30613;
+    border-bottom: 2px solid #e30613;
+}
+        
+.how-it-works h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+        
+.how-it-works ol {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+        
+.how-it-works li {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    counter-increment: step;
+    border: 1px solid #e30613;
+}
+        
+.how-it-works li:before {
+    content: counter(step);
+    background: #e30613;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+        
+/* Мотивационный блок */
+.motivation {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(227, 6, 19, 0.9), rgba(227, 6, 19, 0.8)), url('https://example.com/rostics-team.jpg');
+    background-size: cover;
+    color: white;
+    margin-bottom: 40px;
+    border: 2px solid #e30613;
+}
+        
+.motivation h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+        
+.motivation p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+        
+/* Подвал */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0 20px;
+    border-top: 3px solid #e30613;
+}
+        
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+        
+.footer-links a {
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+        
+.footer-links a:hover {
+    opacity: 1;
+}
+        
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+        
+.social img {
+    width: 30px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+        
+.social img:hover {
+    opacity: 1;
+}
+        
+footer p {
+    text-align: center;
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
+
+/* Формы */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e30613;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Widock TRIAL', Arial, sans-serif;
+    transition: border 0.3s;
+}
+
+.form-control:focus {
+    border-color: #e30613;
+    outline: none;
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: #e30613;
+    color: white;
+    border: 2px solid #e30613;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: 'Widock TRIAL', Arial, sans-serif;
+}
+
+.submit-btn:hover {
+    background: #c00511;
+}
+        
+/* Отделы компании */
+.departments {
+    margin: 60px 0;
+}
+
+.departments h2 {
+    color: #e30613;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.dept-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.dept-item {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e30613;
+}
+
+.dept-item h3 {
+    color: #e30613;
+    margin-bottom: 15px;
+}
+
+.dept-item p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.dept-item a {
+    color: #e30613;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.dept-item a:hover {
+    color: #c00511;
+    text-decoration: underline;
+}
+
+/* Контакты */
+.contacts-hero {
+    text-align: center;
+    padding: 100px 0;
+    margin-bottom: 60px;
+    border-bottom: 3px solid #e30613;
+}
+
+.contacts-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contacts-hero .subtitle {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 60px 0;
+}
+
+.contact-info, .contact-form {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e30613;
+}
+
+.contact-info h2, .contact-form h2 {
+    color: #e30613;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.contact-icon {
+    margin-right: 20px;
+    color: #e30613;
+    font-size: 1.8rem;
+    min-width: 30px;
+}
+
+.contact-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.contact-item p {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.contact-item a {
+    color: #e30613;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #c00511;
+    text-decoration: underline;
+}
+
+.map-container {
+    height: 400px;
+    margin: 60px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e30613;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Карьера */
+.career-hero {
+    text-align: center;
+    padding: 120px 0;
+    color: white;
+    position: relative;
+    border-bottom: 3px solid #e30613;
+}
+
+.career-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.career-hero .subtitle {
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+}
+
+.btn-large {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border: 2px solid #e30613;
+}
+
+.section-intro {
+    font-size: 1.2rem;
+    color: #777;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+/* Карьерные пути */
+.career-path {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 60px 0;
+}
+
+.path-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    border: 1px solid #e30613;
+}
+
+.path-card:hover {
+    transform: translateY(-5px);
+}
+
+.path-card h3 {
+    color: #e30613;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.career-steps {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.career-steps li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+.career-steps li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #e30613;
+}
+
+/* Преимущества работы */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 60px 0;
+}
+
+.benefit-card {
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #e30613;
+    border-radius: 10px;
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    color: #e30613;
+    margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* Вакансии */
+.vacancies {
+    margin: 80px 0;
+}
+
+.vacancy-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: none;
+    border: 1px solid #e30613;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active {
+    background: #e30613;
+    color: white;
+    border-color: #e30613;
+}
+
+.vacancy-list {
+    margin-bottom: 40px;
+}
+
+.vacancy-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e30613;
+}
+
+.vacancy-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.vacancy-header h3 {
+    margin: 0;
+    color: #e30613;
+}
+
+.vacancy-salary {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.vacancy-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+    color: #777;
+}
+
+.vacancy-footer {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* История успеха */
+.success-story {
+    margin: 80px 0;
+}
+
+.story-card {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    border: 1px solid #e30613;
+}
+
+.story-photo img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.story-position {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.story-path {
+    display: flex;
+    gap: 30px;
+    margin: 30px 0;
+    position: relative;
+}
+
+.story-path::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #eee;
+    z-index: 1;
+}
+
+.path-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 0 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.path-year {
+    background: #e30613;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.path-position {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.story-quote {
+    font-style: italic;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    position: relative;
+    border-left: 3px solid #e30613;
+}
+
+.story-quote::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2rem;
+    color: #e30613;
+    line-height: 1;
+}
+
+/* Форма подписки */
+.subscribe-section {
+    margin: 80px 0;
+}
+
+.subscribe-card {
+    background: #e30613;
+    color: white;
+    padding: 60px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #e30613;
+}
+
+.subscribe-card h2 {
+    margin-bottom: 15px;
+}
+
+.subscribe-card p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+}
+
+.subscribe-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+    border: 1px solid #e30613;
+}
+
+.subscribe-form button {
+    border-radius: 0 5px 5px 0;
+    padding: 15px 30px;
+    border: 1px solid #e30613;
+}
+
+/* Hero section - О проекте */
+.hero-about {
+    text-align: center;
+    padding: 110px 0 60px;
+    position: relative;
+}
+
+.hero-about::after {
+    content: '';
+    display: block;
+    width: 1160px;
+    height: 4px;
+    background-color: #e30613;
+    margin: 35px auto 0;
+}
+
+.hero-about h1 {
+    font-size: 3rem; 
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px; 
+    color: #333;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.hero-about .subtitle {
+    font-size: 1.5rem; 
+    max-width: 750px;
+    margin: 0 auto;
+    color: #555;
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+
+/* Карточки */
+.feature-item,
+.team-member {
+    border-radius: 10px;
+    padding: 35px; 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); 
+    transition: transform 0.3s;
+    border: 1px solid #e30613; 
+    background: white;
+}
+
+.feature-item h3,
+.team-member h3 {
+    font-size: 1.6rem; 
+    margin-bottom: 20px;
+}
+
+/* Статистика */
+.stat-item {
+    padding: 35px;
+}
+
+.stat-number {
+    font-size: 4rem; 
+    margin-bottom: 15px;
+}
+
+.stat-label {
+    font-size: 1.5rem; 
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero-about h1 {
+        font-size: 2.4rem; 
+        letter-spacing: 2px;
+    }
+    
+    .hero-about .subtitle {
+        font-size: 1.3rem; 
+    }
+    
+    .feature-item h3,
+    .team-member h3 {
+        font-size: 1.4rem;
+    }
+    
+    .stat-number {
+        font-size: 3.2rem;
+    }
+    
+    .stat-label {
+        font-size: 1.3rem;
+    }
+}
+
+/* Документы */
+.documents-hero {
+    text-align: center;
+    padding: 120px 0 60px 0;
+    color: #e30613;
+    position: relative;
+    border-bottom: 3px solid #e30613;
+}
+
+.documents-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.documents-hero .subtitle {
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin: 0 auto;
+    letter-spacing: 0.5px;
+    color: #e30613;
+}
+
+.documents-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 40px 0 60px 0;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.category-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 1px solid #e30613;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.category-icon {
+    font-size: 2.5rem;
+    color: #e30613;
+    margin-bottom: 20px;
+}
+
+.category-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #e30613;
+}
+
+.document-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding: 20px 25px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    border: 1px solid #e30613;
+}
+
+.document-card:hover {
+    transform: translateY(-3px);
+}
+
+.document-icon {
+    font-size: 1.8rem;
+    color: #e30613;
+    min-width: 40px;
+}
+
+.document-info {
+    flex-grow: 1;
+}
+
+.document-actions {
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
+.access-notice {
+    background: #fff8e6;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #e67e00;
+    font-size: 1.1rem;
+    border-left: 4px solid #e30613;
+}
+
+/* Конфиденциальность */
+.privacy-hero {
+    text-align: center;
+    padding: 60px 0 30px;
+    border-bottom: 3px solid #e30613;
+}
+
+.privacy-hero h1 {
+    font-size: 2.5rem;
+    color: #e30613;
+    margin-bottom: 15px;
+}
+
+.privacy-hero .subtitle {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+.privacy-content {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    margin: 40px 0;
+    border: 1px solid #e30613;
+}
+
+.privacy-content h2 {
+    color: #e30613;
+    margin: 30px 0 15px;
+    font-size: 1.8rem;
+}
+
+.privacy-content h3 {
+    margin: 25px 0 10px;
+    font-size: 1.3rem;
+}
+
+.privacy-content p, .privacy-content ul {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.privacy-content ul {
+    padding-left: 20px;
+}
+
+.privacy-content li {
+    margin-bottom: 8px;
+}
+
+.last-updated {
+    font-style: italic;
+    color: #777;
+    text-align: right;
+    margin-top: 30px;
+}
+
+.legal-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.legal-links a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.legal-links a:hover {
+    color: white;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .contact-grid,
+    .story-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .subscribe-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .subscribe-form input,
+    .subscribe-form button {
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .course-categories,
+    .documents-categories {
+        flex-direction: column;
+    }
+    
+    .how-it-works ol {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .career-hero,
+    .contacts-hero,
+    .documents-hero {
+        padding: 80px 20px;
+    }
+    
+    .career-hero h1,
+    .contacts-hero h1,
+    .documents-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .career-hero .subtitle,
+    .contacts-hero .subtitle,
+    .documents-hero .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .vacancy-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .vacancy-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .subscribe-card {
+        padding: 30px;
+    }
+    
+    .category-icon {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contacts-hero {
+        padding: 60px 0;
+    }
+    
+    .contact-info, .contact-form {
+        padding: 25px;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+    }
+    
+    .contact-icon {
+        margin-bottom: 10px;
+    }
+    
+    .document-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .document-actions {
+        margin: 15px 0 0 0;
+        width: 100%;
+    }
+    
+    .category-icon {
+        font-size: 1.8rem;
+    }
+    
+    .feature-item,
+    .team-member,
+    .stat-item {
+        padding: 25px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Widock TRIAL', Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #e30613;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-ra {
+    font-weight: bold;
+    font-size: 24px;
+    color: #e30613;
+}
+
+.logo-text {
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e30613;
+}
+
+/* Основное содержимое */
+.course-hero {
+    background-color: #e30613;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.course-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.course-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.course-content {
+    padding: 60px 0;
+}
+
+.section {
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e30613;
+}
+
+.section h2 {
+    color: #e30613;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.section p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.step {
+    margin-bottom: 30px;
+}
+
+.step h3 {
+    color: #e30613;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* Подвал */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 2px solid #e30613;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+}
+
+.copyright {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    .course-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .section {
+        padding: 25px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Widock TRIAL', Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Шапка */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #e30613;
+}
+
+header > div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: auto;
+    transition: transform 0.3s;
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+header ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+header a {
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+    padding: 5px 0;
+    position: relative;
+}
+
+header a:hover {
+    color: #e30613;
+}
+
+header a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #e30613;
+    transition: width 0.3s;
+}
+
+header a:hover::after {
+    width: 100%;
+}
+
+/* Основное содержимое */
+.course-hero {
+    background-color: #e30613;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(227, 6, 19, 0.9), rgba(227, 6, 19, 0.8)), url('../images/service_bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.course-hero > div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.course-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.course-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+}
+
+.course-content {
+    padding: 60px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    margin: 0 20px 40px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e30613;
+}
+
+.section h2 {
+    color: #e30613;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.section p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 25px auto;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.step {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #e30613;
+}
+
+.step h3 {
+    color: #e30613;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.step ol, .step ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.step li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Подвал */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 0 30px;
+    text-align: center;
+}
+
+footer > div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.social img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social img:hover {
+    transform: scale(1.1);
+}
+
+footer p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header > div {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    header ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .course-hero {
+        padding: 80px 0;
+    }
+    
+    .course-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .section {
+        padding: 25px;
+        margin: 0 10px 30px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Widock TRIAL', Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 0;
+}
+
+/* Шапка */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #e30613;
+}
+
+.header-logo img {
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.header-logo img:hover {
+    transform: scale(1.05);
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.main-nav a {
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+    padding: 5px 0;
+    position: relative;
+}
+
+.main-nav a:hover {
+    color: #e30613;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #e30613;
+    transition: width 0.3s;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/* Основное содержимое */
+.course-hero {
+    background-color: #e30613;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(227, 6, 19, 0.9), rgba(227, 6, 19, 0.8)), url('../images/hygiene_bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.course-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.course-hero p {
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+}
+
+.course-content {
+    padding: 60px 0;
+}
+
+.section {
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border: 2px solid #e30613;
+}
+
+.section h2 {
+    color: #e30613;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.section p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 25px auto;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.step {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #e30613;
+}
+
+.step h3 {
+    color: #e30613;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+.step ol, .step ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.step li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Подвал */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 0 30px;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.social img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social img:hover {
+    transform: scale(1.1);
+}
+
+footer p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .course-hero {
+        padding: 80px 0;
+    }
+    
+    .course-hero h1 {
+        font-size: 2.4rem;
+    }
+    
+    .course-hero p {
+        font-size: 1.3rem;
+    }
+    
+    .section {
+        padding: 25px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+/* Анимации */
+        .test-container h1,
+        .progress-bar,
+        .question,
+        #results {
+            will-change: opacity, transform;
+        }
+
+        .question {
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+        }
+
+        #results {
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logout-btn {
+    padding: 5px 10px;
+    background: #e30613;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.logout-btn:hover {
+    background: #c00511;
+}
+.user-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .user-name {
+            color: #333;
+            font-weight: bold;
+        }
+        .logout-btn {
+            background-color: #e30613;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .logout-btn:hover {
+            background-color: #c00511;
+        }

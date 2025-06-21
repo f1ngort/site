@@ -1,0 +1,505 @@
+:root{
+    --color-1: #CA2A39 ;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+h3{
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+header{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Hero{
+    position: relative;
+    width: 100%;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.Hero.jaecoo {
+    background-image:  linear-gradient(to right,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.9)),url(../images/jaecoo_c8.png);
+}
+
+.Hero.lising {
+    background-image:  linear-gradient(to right,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.9)),url(../images/lising.png);
+}
+
+.Hero.trade {
+    background-image:  linear-gradient(to right,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.9)),url(../images/tradein.png);
+}
+
+.Hero.credit {
+    background-image:  linear-gradient(to right,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.9)),url(../images/credit.png);
+}
+
+.Hero.omoda {
+    background-image:  linear-gradient(to right,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.9)),url(../images/omoda_c7.jpg);
+}
+
+.Hero.geely {
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.1)),url(../images/geely_monjaro.jpg);
+}
+
+.Hero h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    font-style: italic;
+    font-size: 52px;
+    font-weight: 900;
+    transform: translate(-50%, -50%);
+}
+.Description h2{
+    
+    color: var(--color-1);
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+.DescriptionH2border{
+    background-color: var(--color-1);
+    height: 2px;
+    width: 96px;
+}
+.Descriptionlink{
+    font-size: 18px;
+    margin-bottom: 48px;
+}
+.Descriptionlink span{
+    color: var(--color-1);
+}
+.DescriptionUl{
+    display: flex;
+    gap: 24px;
+}
+.Description{
+    width: 1256px;
+    /* display: flex;
+    justify-self: center;
+    flex-direction: column; */
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 24px;
+    
+}
+.DescriptionText{
+    font-size: 18px;
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.Catalog{
+    margin-top: 48px;
+    width: 100%;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    color: white;
+    height:900px;
+}
+
+.Catalog.jaecoo {
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.1)),url(../images/jaecoo_c7.jpg);
+}
+
+.Catalog.omoda {
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.1)),url(../images/omoda.jpg);
+}
+
+.Catalog.geely {
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.1)),url(../images/geely_preface.jpg);
+
+}
+
+.Catalog div{
+    font-size: 62px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 48px;
+}
+.CatalogText{
+    width: 600px;
+    text-wrap:pretty;
+    font-size: 32px;
+    text-align: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    height: 600px;
+    width: 800px;
+    box-sizing: border-box;
+
+    font-style: italic;
+
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+.form h2{
+    color: var(--color-1);
+    font-size: 42px;
+    font-weight: 900;
+}
+
+.FormInput{
+    width: 80%;
+    border: none;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+    height: 64px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.FormInput:focus{
+    outline: none;
+}
+.FormInput::placeholder{
+    position: absolute;
+    padding-bottom: 12px;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 900;
+    width: 110%;
+}
+.FormButton{
+    background-color: var(--color-1);
+    color: white;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 900;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 54px;
+    margin-top: 48px;
+    transition: background-color ease-in-out 250ms;
+
+}
+.FormButton:hover{
+    cursor: pointer;
+    background-color:#851c26
+}
+.something{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 420px;
+    background-color:aliceblue
+}
+.smtbox1{
+    width: 360px;
+    height: 80%;
+    background-image: url(../images/woman.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 15px;
+}
+
+.smtbox11{
+    width: 360px;
+    height: 80%;
+    background-image: url(../images/trade2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 15px;
+}
+
+.smtbox111{
+    width: 360px;
+    height: 80%;
+    background-image: url(../images/credit2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 15px;
+}
+.smtbox2{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    width: 880px;
+    height: 80%;
+    text-align: left;
+    text-decoration:double;
+}
+.smtbox2 h2{
+    font-size: 32px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+.smtbox2 h2 span{
+    color:#CA2A39
+}
+.lising{
+    position: relative;
+}
+.credit{
+    height: 800px;
+    background-position: center;
+    background-size: cover;
+    
+}
+.arbuz{
+  color: white;
+  font-size: 48px;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+  font-style: oblique;
+  
+
+}
+.takecredit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mmm{
+    position: absolute;
+    left:50%;
+    top: 70%;
+    transform: translate(-50%, -70%);
+    border-radius: 6px;
+    color: black;
+    padding: 36px 56px;
+    
+    font-size: 24px;
+}
+.mmm:hover{
+    background-color: bisque;
+}
+.lisingbox{
+    height: 700px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 24px;
+}
+.hhh2{
+    padding-bottom: 60px;
+}
+.hhh{
+    position: absolute;
+    bottom: 0;
+}
+.stavka{
+    display: flex;
+    width: 100%;
+    gap: 12px;
+    
+}
+.stavkatext{
+    color: #CA2A39;
+}
+.lisingbox button{
+    font-size: 18px;
+    padding: 16px 24px;
+    border: none;
+    background-color: white;
+    font-weight: 900;
+    font-style: italic;
+    cursor: pointer;
+
+    
+    
+    
+}
+.priviligeul{
+       display: grid;
+       grid-template-columns: 20vi 20vi;
+       gap: 10vh;
+}
+.priviligeimg{
+    width: 90px;
+    height: 90px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.i1{
+    background-image: url(../images/privilige1.svg);
+}
+.i2{
+    background-image: url(../images/privilige2.svg);
+}
+.i3{
+    background-image: url(../images/privilige3.svg);
+}
+.i4{
+    background-image: url(../images/privilige4.svg);
+}
+.priviligeli{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+}
+.priviligeli h3{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+.privilige{
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+.privilige h2{
+    font-size: 32px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    display: flex;
+    justify-self: center;
+}
+.privilige h2 span{
+    color: #CA2A39;
+    padding-right: 16px;
+}
+/* Z */
+.banking{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+.bankingli{
+    width: 200px;
+    height: 160px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.vtb{
+    background-image: url(../images/vtb.jpg);
+}
+.alpha{
+    background-image: url(../images/ialpha.jpg);
+}
+.sber{
+    background-image: url(../images/sber.jpg);
+}
+.expo{
+    background-image: url(../images/expo.jpg);
+}
+.psb{
+    background-image: url(../images/psb.jpg);
+}
+.rshb{
+    background-image: url(../images/rshb.jpg);
+}
+.open{
+    background-image: url(../images/open.jpg);
+}
+.bankingbox{
+
+    
+    display: flex;
+    gap: 36px;
+    transition: transform ease-in-out 250ms, opacity ease-in-out 250ms;
+}
+
+.banknext{
+    width: 30px;
+    height: 40px;
+    background-color:#CA2A39;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    
+
+    position: absolute;
+    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+
+    margin: 0px 36px;
+    
+}
+.banking h2{
+    display: flex;
+    gap: 16px;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+.banking h2 span{
+    color: #CA2A39;
+}
+.before{
+    position: absolute;
+    right: auto;
+    left: 0;
+}
+.d1{
+    opacity: 1;
+    padding-top: 72px;
+}
+.d2{
+    opacity: 0;
+}
+.buttonbanktop{
+    transform: translateY(160px);
+    opacity: 0;
+}
+.buttonbankbottom{
+    transform: translateY(-160px);
+    opacity: 1;
+}
+/* closeButton.addEventListener('click',function(e){
+    e.preventDefault();
+    bank2.classList.toggle('buttonbankbottom') */
